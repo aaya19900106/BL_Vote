@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービス概要
+あのキャラクターはBLで言うと受けなのか攻めなのか、
+投票によって簡単に結果がわかるアプリです。
 
-Things you may want to cover:
+## 登場人物
+BoysLoveが好きなすべての方
 
-* Ruby version
+## ユーザーが抱える問題
+BoysLoveの一般論を知りたくてもなかなか周りの人に話せない
+簡単にBoysLoveの事を話したい
+よくある受けか攻めか論争に入りたい
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 解決方法
+簡単に受けか攻めか投票をして、
+該当キャラクターや芸能人が受けか攻めかBoysLove界隈の一般論が
+わかるようにする。
