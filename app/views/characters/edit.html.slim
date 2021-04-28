@@ -1,0 +1,7 @@
+h1 キャラクターの編集
+
+
+.nav.justify-content-end
+  = link_to '一覧', characters_path, class: 'nav-link'
+
+= render partial: 'form', locals: { character: @character }

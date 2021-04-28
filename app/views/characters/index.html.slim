@@ -1,0 +1,21 @@
+h1 キャラクター一覧
+
+= link_to 'キャラクターを登録する', new_character_path, class: 'btn btn-primary'
+
+.mb-3
+table.table.table-hover
+  thead.thead-default 
+    tr 
+      th= Character.human_attribute_name(:name)
+      th 受
+      th 攻
+      th
+    tbody 
+      - @characters.each do |character|
+        tr 
+          td= link_to character.name, character_path(character)
+          td= character.ukes.count
+          td= character.semes.count
+          td 
+            = link_to '編集', edit_character_path(character), class: 'btn btn-primary mr-3'
+            = link_to '削除', character, method: :delete, data: { confirm: "キャラクター「#{character.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'

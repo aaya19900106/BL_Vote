@@ -1,0 +1,15 @@
+h1 キャラクターの詳細
+
+.nav.justify-content-end 
+  = link_to '一覧', characters_path, class: 'nav-link'
+table.table.table-hover 
+  tbody 
+    tr 
+      th= Character.human_attribute_name(:name)
+      td= @character.name
+    tr 
+      th= Character.human_attribute_name(:created_at)
+      td= @character.created_at
+
+= link_to '編集', edit_character_path, class: 'btn btn-primary mr-3'
+= link_to '削除', @character, method: :delete, data: { confirm: "キャラクター「#{@character.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'

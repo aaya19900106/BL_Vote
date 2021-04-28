@@ -1,0 +1,5 @@
+= form_with model: character, local: true do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control', id: 'character_name'
+  = f.submit nil, class: 'btn btn-primary'
