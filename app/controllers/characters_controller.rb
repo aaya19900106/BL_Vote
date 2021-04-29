@@ -28,7 +28,8 @@ class CharactersController < ApplicationController
 
   def update
     character = Character.find(params[:id])
-    character.update!
+    binding.irb
+    character.update!(character_params)
     redirect_to characters_url, notice: "「#{character.name}」を更新しました！"
   end
 
