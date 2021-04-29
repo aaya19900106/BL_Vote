@@ -15,4 +15,8 @@ html
     .container
       - if flash.notice.present?
         .alert.alert-success= flash.notice
+    .fixed-bottom.navbar.navbar-expand-md.navbar-light.bg-light.p-4.justify-content-end
+        i.fas.fa-copyright 2021 ayako　
+        = link_to 'https://twitter.com/ayakocareer' do 
+          i.fab.fa-twitter
     = yield
