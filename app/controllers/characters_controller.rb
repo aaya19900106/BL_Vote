@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   def index
-    @characters = Character.all.order(created_at: :desc)
+    @characters = Character.all.order("created_at DESC")
   end
 
   def edit
