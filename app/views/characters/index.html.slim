@@ -15,7 +15,7 @@ table.table.table-hover
     tbody 
       - @characters.each do |character|
         tr 
-          td= link_to character.name, character_path(character)
+          td= character.name
           td= link_to '受け', character_ukes_url(character), method: :post
           td= character.ukes.count
           td= link_to '攻め', character_semes_url(character), method: :post

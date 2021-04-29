@@ -3,10 +3,6 @@ class CharactersController < ApplicationController
     @characters = Character.all.order(created_at: :desc)
   end
 
-  def show
-    @character = Character.find(params[:id])
-  end
-
   def edit
     @character = Character.find(params[:id])
   end
