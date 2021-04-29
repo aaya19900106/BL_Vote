@@ -12,7 +12,7 @@ html
       .navbar-brand 
       = link_to characters_path do
         = image_tag('/header.png' , size: "110x40")
-    .container
+    .container.p-3
       - if flash.notice.present?
         .alert.alert-success= flash.notice
     .fixed-bottom.navbar.navbar-expand-md.navbar-light.bg-light.p-4.justify-content-end

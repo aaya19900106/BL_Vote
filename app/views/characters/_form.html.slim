@@ -1,5 +1,5 @@
 = form_with model: character, local: true do |f|
-  .form-group
+  .form-group.mx-5
     = f.label :name
     = f.text_field :name, class: 'form-control', id: 'character_name'
-  = f.submit nil, class: 'btn btn-primary'
+  = f.submit nil, class: 'btn btn-outline-secondary'
