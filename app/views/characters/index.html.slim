@@ -7,19 +7,17 @@ table.table.table-hover
   thead.thead-default 
     tr 
       th= Character.human_attribute_name(:name)
-      th 受けボタン
       th 受け数
-      th 攻めボタン
       th 攻め数
       th
     tbody 
       - @characters.each do |character|
         tr 
           td= character.name
-          td= link_to '受け', character_ukes_url(character), method: :post
-          td= character.ukes.count
-          td= link_to '攻め', character_semes_url(character), method: :post
-          td= character.semes.count
+          td= link_to character_ukes_url(character), method: :post do
+            = character.ukes.count
+          td= link_to character_semes_url(character), method: :post do
+            = character.semes.count
           td 
             = link_to '編集', edit_character_path(character), class: 'btn btn-primary mr-3'
             = link_to '削除', character, method: :delete, data: { confirm: "キャラクター「#{character.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
