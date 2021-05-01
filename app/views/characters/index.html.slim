@@ -2,7 +2,9 @@ br
 br
   .mb-5
     = link_to '　　　キャラクターを登録する　　　', new_character_path, class: 'btn btn-outline-secondary'
-
+    .mb-3
+    = link_to '使い方', modal_path, remote: true, class: "btn btn-outline-secondary"
+  #user-modal.modal.fade aria-hidden="true" role="dialog" tabindex="-1" 
 
   table.table.table-hover.col-8.mx-auto
     thead.thead-default
