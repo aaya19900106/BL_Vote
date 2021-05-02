@@ -1,5 +1,8 @@
 # README
 
+## BLvote  
+https://blvote.herokuapp.com/  
+
 ## サービス概要
 あのキャラクターはBLで言うと受けなのか攻めなのか、  
 投票によって簡単に結果がわかるアプリです。  
