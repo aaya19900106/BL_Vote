@@ -1,6 +1,4 @@
-br
-br
-  .mb-5
+  .mb-2
     = link_to '　　　キャラクターを登録する　　　', new_character_path, class: 'btn btn-outline-secondary'
     .mb-3
     = link_to '使い方', modal_path, remote: true, class: "btn btn-outline-secondary"
@@ -22,10 +20,6 @@ br
             td= link_to character_semes_url(character), method: :post do
               = character.semes.count
             td 
-              = link_to edit_character_path(character) do
-                i.fas.fa-edit.mr-3.text-success
-              = link_to character, method: :delete, data: { confirm: "キャラクター「#{character.name}」を削除します。よろしいですか？" } do 
-                i.fas.fa-trash.text-danger.mr-3
               =link_to "http://twitter.com/share?url=#{request.url}/&text=#{character.name}は受け？攻め？投票してみよう！&hashtags=BLvote", title: 'Twitter', target: '_blank' do 
                 i.fab.fa-twitter
   = paginate @characters
