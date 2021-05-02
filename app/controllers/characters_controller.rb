@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   def index
-    @characters = Character.all.order("created_at DESC")
+    @characters = Character.all.order(created_at: :DESC).page(params[:page]).per(7)
   end
 
   def edit

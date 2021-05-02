@@ -28,3 +28,4 @@ br
                 i.fas.fa-trash.text-danger.mr-3
               =link_to "http://twitter.com/share?url=#{request.url}/&text=#{character.name}は受け？攻め？投票してみよう！&hashtags=BLvote", title: 'Twitter', target: '_blank' do 
                 i.fab.fa-twitter
+  = paginate @characters
