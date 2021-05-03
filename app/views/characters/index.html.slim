@@ -20,6 +20,6 @@
             td= link_to character_semes_url(character), method: :post do
               = character.semes.count
             td 
-              =link_to "http://twitter.com/share?url=#{request.url}/&text=#{character.name}は受け？攻め？投票してみよう！&hashtags=BLvote", title: 'Twitter', target: '_blank' do 
+              =link_to "http://twitter.com/share?url=#{request.url}/&text=#{character.name}は#{character.ukes.count}受け、#{character.semes.count}攻め！あなたも投票してみよう！&hashtags=BLvote", title: 'Twitter', target: '_blank' do 
                 i.fab.fa-twitter
   = paginate @characters
